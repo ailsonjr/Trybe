@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 4.4</title>
+</head>
+<body>
+    <h2>Insira no objeto uma nova propriedade com o nome de chave "recorrente" e o valor "Sim" e, em seguida, imprima o objeto no console.
+</h2>
+<li>
+    Valor esperado no console:
+</li>
+    <p> {<br>
+        &ensp; personagem: 'Margarida',<br>
+        &ensp; origem: 'Pato Donald',<br>
+        &ensp; nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',<br>
+        &ensp; recorrente: 'Sim'<br>
+      };<br>
+      <hr>
+            personagem: <em id="resposta"></em><br>
+            origem: <em id="a"></em><br>
+            nota: <em id="b"></em><br>
+            recorrente: <em id="c"></em><br>
+    </p>
+    <script>
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim"
+};
+console.log (info)
+document.getElementById("resposta").innerHTML = info.personagem;
+document.getElementById("a").innerHTML = info.origem;
+document.getElementById("b").innerHTML = info.nota;
+document.getElementById("c").innerHTML = info.recorrente;
+    </script>
+</body>
+</html>

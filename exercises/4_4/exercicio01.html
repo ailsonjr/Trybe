@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 4.4</title>
+</head>
+<body>
+    <h1>Imprima no console uma mensagem de boas vindas para a personagem:</h1>
+    <p>let info = { <br>
+        &ensp; personagem: "Margarida",<br>
+        &ensp; origem: "Pato Donald",<br>
+        &ensp; nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",<br>
+        };<br><br>
+            Resposta = <em id="resposta"></em>
+    </p>
+    <script>
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+};
+console.log ("Bem vinda, " + info.personagem)
+document.getElementById("resposta").innerHTML = "Bem vinda, " + info.personagem;
+    </script>
+</body>
+</html>

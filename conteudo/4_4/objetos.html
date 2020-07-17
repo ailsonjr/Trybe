@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+O nome do curso é: <span id="curso_nome"></span><br/>
+A descrição do módulo Internet é: <span id="internet_descricao"></span><br/>
+A última semana do módulo HTML é: <span id="html_ultima_semana"></span><br/>
+O tipo do módulo Shell é: <span id="shell_tipo"></span><br/>
+
+<script>
+
+// Criação do objeto curso
+var curso = {
+  nome: "Curso de desenvolvimento Front-end 2019/09 - BH",
+  modulos: {
+    internet: {
+      descricao: "Como a internet funciona",
+      semana: 1,
+      tipo: "teórica",
+      estado: "completo"
+    },
+    shell: {
+      descricao: "Shell Script",
+      semana: 1,
+      tipo: ["teórica", "prática"],
+      estado: "completo"
+    },
+    html: {
+      descricao: "HTML + CSS",
+      semana: [2, 3],
+      tipo: "prática",
+      estado: "em andamento"
+    }
+  },
+  quantidade_alunos: 10,
+  arquivado: false
+};
+
+// Mostre o nome do curso
+document.getElementById("curso_nome").innerHTML = curso.nome
+
+
+// Agora é a sua vez!!!
+
+// Mostre a descrição do módulo Internet
+ curso.modulos.internet.descricao + " com " + curso.modulos.internet.semana + " semana de duração" + " do tipo "+ curso.modulos.internet.tipo
+
+// Mostre qual é a última semana do módulo HTML
+document.getElementById("html_ultima_semana").innerHTML = "a semana " + curso.modulos.html.semana[1]
+
+// Mostre qual é o tipo do módulo Shell
+document.getElementById("shell_tipo").innerHTML = curso.modulos.shell.tipo[0] + " e " + curso.modulos.shell.tipo[1]
+
+
+
+</script>
+
+</body>
+</html>

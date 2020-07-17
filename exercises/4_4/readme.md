@@ -1,0 +1,3 @@
+Nesse repertório estão os exercícios feito na Aula 4.4 JavaScript - Objetos e funções
+Apesar das aulas ser de JavaScript, os exercícios estão salvos com a extesão HTML, pois eu criei a página com descrição do exercício e também com a resposta pedida, o código em JavaScript está dentro do HTMl no element script.
+Pretendo fazer isso em todas a pastas para ficar mais fácil a visualização dos exercícios para mim e quem for olhar.
