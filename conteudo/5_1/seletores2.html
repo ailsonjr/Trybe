@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- Adicione ao seu HTML uma classe com alguns estilos para os seus dois parágrafos.
+Recupere os seus parágrafos via código JavaScript, usando a função getElementsByClassName;
+Altere algum estilo do primeiro deles.
+Recupere o subtítulo pela tag. -->
+<html>
+  <body>
+    <h2 id="page-title">Coração Valente</h2>
+    <p class="paragraphs">Meu filme favorito</p>
+    <h4 id="subtitle">Por que é meu filme favorito</h4>
+    <p class="paragraphs">Porque narra a história de um homem que queria ter uma vida tranquila e por conta da tirania que seu povo vivia, teve sua esposa morta e com isso ele lutou para que seu povo tivesse liberdade!</p>
+
+    <script>
+      let paragraph = document.getElementsByClassName("paragraphs");
+      paragraph[0].style.color = "blue";
+      let page_title = document.getElementById("page-title");
+      page_title.style.color = "red";
+    </script>
+  </body>
+</html>
