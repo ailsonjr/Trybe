@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+</html>
+<head>
+  <style>
+    .flexy {
+  display: flex;
+  font-size: 20px;
+}
+#input-texto {
+  width: 80%;
+  line-height: 24px;
+}
+.fonte {
+  font-size: 32px;
+  font-weight: 700;
+}
+.como-usar {
+  border: 1px solid black;
+  width: 75%;
+}
+.quadrado {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+  </style>
+</head>
+<body>
+
+  <div class=flexy>
+    <div class="como-usar">
+      <span class="fonte">Instruções (leia tudo)
+      </span><br>Escreva o nome de uma cor na caixa <strong>(em inglês)</strong> e depois <strong>clique fora da caixa de texto</strong> em qualquer lugar, o evento usado foi o change e ele vai mudar a cor do quadrado aqui do lado direito:<br>
+      <input type=text id="input-texto"><br> Esse exemplo demonstra que devemos encontrar o <strong>melhor evento</strong> para nossos listeners, estamos tendo que clicar fora da caixa após digitar a cor, por conta de estarmos utilizando um evento que não
+      é o melhor para esse tipo de trabalho.<br><br> Experimente na aba JS aqui mesmo, <strong>trocar</strong> o evento <strong>'change'</strong>, pelo evento <strong>'keyup'</strong> e teste novamente.
+    </div>
+  
+    <div class="quadrado"></div>
+  
+  </div>
+  
+  <script>
+    const inputTexto = document.querySelector("#input-texto");
+const divQuadrado = document.querySelector(".quadrado");
+
+function corQuadrado() {
+  divQuadrado.style.backgroundColor = inputTexto.value;
+}
+
+inputTexto.addEventListener("change", corQuadrado);
+
+  </script>
+</body>
