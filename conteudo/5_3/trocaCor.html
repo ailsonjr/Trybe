@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+</html>
+<head>
+  <style>
+.flexy {
+  display: flex;
+  font-size: 20px;
+}
+
+#input-texto {
+  width: 80%;
+  line-height: 24px;
+}
+.fonte {
+  font-size: 32px;
+  font-weight: 700;
+}
+.como-usar {
+  border: 1px solid black;
+  width: 75%;
+}
+.caixa1,
+.caixa2 {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  </style>
+</head>
+<body>
+  <div class=flexy>
+    <div class="como-usar"><span class="fonte">Instruções (leia tudo)</span><br>Você tem dois quadrados, com nomes de Caixa 1 e Caixa 2, quando clicar na Caixa 1, a cor da Caixa 2 deve ser trocada para ciano.<br> Altere apenas o JavaScript, criando o event listener adequado.</div>
+    <div class="caixa1">Caixa 1</div>
+    <div class="caixa2">Caixa 2</div>
+  </div>
+  
+  <script>
+      const caixaUm = document.querySelector(".caixa1");
+      const caixaDois = document.querySelector(".caixa2");
+
+      function trocaCor() {
+        caixaDois.style.backgroundColor = "cyan";
+      }
+      //Crie seu event listener abaixo:
+      caixaUm.addEventListener("click", trocaCor);
+  </script>
+</body>
