@@ -93,6 +93,17 @@
         tagImg.src = 'https://picsum.photos/200'
         document.querySelector('.left-content').appendChild(tagImg)
 
+        //8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+        let unList = document.createElement('ul')
+        document.querySelector('.right-content').appendChild(unList)
+        let numbers = ['um','dois','três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+        for (let i = 0; i < numbers.length; i += 1) {
+            let list = document.createElement('li')
+            list.innerHTML = numbers[i]
+            unList.appendChild(list)
+        }
+
+
     </script>
   </body>
 </html>
@@ -100,5 +111,4 @@
 <!-- O objetivo desses exercícios é colocar em prática o que você acabou de aprender sobre DOM. Por isso, você deve fazer os exercícios utilizando apenas código JavaScript, o qual deve ser inserido entre as tags <script> e </script>.
 
 Para uma melhor organização, faça commits a cada tarefa concluída. Vamos aos exercícios:
-8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 9. Adicione 3 tags h3, todas sendo filhas do div criado no passo 2. -->
