@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+</html>
+<head>
+  <style>
+.flexy {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.flexy-s {
+  width: 24%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caixa-texto {
+  width: 100%;
+  margin-left: 5px;
+  border: 2px dashed black;
+}
+
+.fonte {
+  font-size: 32px;
+  font-weight: 700;
+}
+.como-usar {
+  border: 1px solid black;
+  width: 74%;
+}
+.caixa1, .caixa2 {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  </style>
+</head>
+<body>
+  <div class=flexy>
+    <div class="como-usar">
+      <span class="fonte">Instruções (leia tudo)</span><br> Agora, uma caixa de texto e dois quadrados, as instruções são as seguintes:<br> Ao digitar alguma coisa na caixa de texto, o texto da caixa 1 seja alterado para o que foi escrito dentro da caixa
+      letra a letra, enquanto você digita.<br> Ao clicar em qualquer lugar fora da caixa de texto após digitar alguma coisa na mesma, o texto da Caixa 2 seja alterado.<br> Altere apenas o JavaScript, criando o event listener adequado e caso precise, visite
+      o link com todos os elementos.
+    </div>
+    <div class="flexy-s">
+      <input type="text" class="caixa-texto" placeholder="Digite aqui">
+      <div class="caixa1">Caixa 1</div>
+      <div class="caixa2">Caixa 2</div>
+    </div>
+  </div>
+  <script>
+      const caixaTexto = document.querySelector('.caixa-texto');
+      const caixaUm = document.querySelector('.caixa1');
+      const caixaDois = document.querySelector('.caixa2');
+      function trocaTextoA () {
+        caixaUm.innerText = caixaTexto.value;
+      }
+      function trocaTextoB () {
+        caixaDois.innerText = caixaTexto.value;
+      }
+      //Crie seu event listener abaixo:
+      caixaTexto.addEventListener("keyup", trocaTextoA );
+      caixaTexto.addEventListener('change', trocaTextoB);
+  </script>
+</body>
