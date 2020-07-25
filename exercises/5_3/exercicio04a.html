@@ -1,0 +1,43 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>JavaScript event handlers exercise</title>
+    <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/reset.css"/>    
+    <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/jsweb.css"/>
+  </head>
+  <body>
+    <div id="excontainer">
+      <div id="pagecontent">
+    <h1>Event handlers exercise</h1>
+
+  <h2>Extensions</h2>
+  
+  <img class='photo' src='https://cdn.pixabay.com/photo/2015/11/17/13/13/dogue-de-bordeaux-1047521_960_720.jpg'>
+ 
+	<ol>
+    <li>
+      <p>For this task you will need two images of the same size.  Add one image into this page using a html <b>&lt;img /&gt;</b> tag.  Using the <b>onMouseOver()</b> and <b>onMouseOut()</b> event handlers try and make the image change to the second image when the mouse pointer hovers over it, and then swap back to the first image when the mouse pointer is moved off of the image.</p>
+			<p><a href="http://www.htmlite.com/JS019.php" target="_blank">This tutorial</a> may be of help!</p>   
+    </li>
+  </ol>
+  <script language="javascript" type="text/javascript">     
+    const imgChg = document.querySelector('.photo');
+    imgChg.addEventListener('mouseover', function() {
+      imgChg.src = 'https://cdn.pixabay.com/photo/2015/11/17/13/13/dogue-de-bordeaux-1047521_960_720.jpg';
+    } );
+    imgChg.addEventListener('mouseout', function() {
+      imgChg.src = 'https://cdn.pixabay.com/photo/2016/10/31/14/55/rottweiler-1785760_960_720.jpg';
+    } );
+
+    // const elementImg = document.querySelector(".exercise3");
+    //       elementImg.addEventListener('mouseover', function () {
+    //         elementImg.src = "https://cdn.pixabay.com/photo/2016/10/31/14/55/rottweiler-1785760_960_720.jpg";
+    //       });
+    //       elementImg.addEventListener('mouseout', function () {
+    //         elementImg.src = "https://cdn.pixabay.com/photo/2015/11/17/13/13/dogue-de-bordeaux-1047521_960_720.jpg";
+    //       });
+
+    </script>
+	</body>
+</html>
