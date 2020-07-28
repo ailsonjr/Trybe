@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 4.4</title>
+</head>
+<body>
+    <h2>Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+</h2>
+<h3><strong>Exemplo:</strong></h3>
+<ul>
+    <li> Array de teste: [2, 3, 6, 7, 10, 1];</li>
+    <li>Valor esperado no retorno da função: 4.</li>
+
+    <script>
+
+        // criar uma variável para que guarde o valor qu será retornado, essa váriável só deve ter o valor do índice da array
+        // criar uma váriável que contenha o número maior para usar de comparação
+        // usar um for para para usar o número maior para comparar com o array
+       function highestI (arrayNumber) {
+           let higherI = 0;
+           for (let i in arrayNumber) {
+               if (arrayNumber[higherI] < arrayNumber[i]) {
+                   higherI = i;
+                }
+            }
+            return higherI;
+        }
+    </script>
+</body>
+</html>

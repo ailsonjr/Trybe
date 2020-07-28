@@ -16,20 +16,27 @@
     <li>verificaPalindrome("desenvolvimento");</li>
     <li>Retorno esperado: <em>false</em></li>
 </ul>
+<h3>Verificação de palíndromo:</h3>
+<h4>Digite palavra a ser verificada:</h4>
+<input id='box-input' type="text"> <button id="btn">Verificar</button>
+<h5 id="result"></h5>
     <script>
-
-        function palindromo (palavra){
-          let verifica = true;
-          let pos = palavra.length -1;
-                    for ( let i = 0; i<= palavra.length; i+=1 ) {
-                        if ( palavra[i] !== palavra[pos] ){
-                            verifica = false;
-                            break;
-                        }
-                        pos -= 1;
-                    }
-                    return verifica;
-                }
+        let box = document.querySelector('#box-input');
+        let check = document.getElementById('#result')
+    function palindromo (){
+        check= true;
+        let pos = box.value.length -1;
+        for ( let i = 0; i<= box.value.length; i+=1 ) {
+            if ( box.value[i] !== box.value[pos] ){
+                check = false;
+                break;
+            }
+            pos -= 1;
+        }
+        return check;
+    }
+    let verifica = document.querySelector('#btn');
+    verifica.addEventListener('click', palindromo);
     console.log (palindromo("arara"));
     console.log (palindromo("desenvolvimento"));
     </script>
