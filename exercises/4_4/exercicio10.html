@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 4.4</title>
+</head>
+<body>
+    <h2>Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete
+</h2>
+<h3><strong>Exemplo:</strong></h3>
+<ul>
+    <li>Array de teste: [2, 3, 2, 5, 8, 2, 3];</li>
+    <li>Valor esperado no retorno da função: 2.</li>
+
+    <script>
+        // qdo o 2° contador for maior q o 1°, a varável que guarda o n° q se repete deve mudar para o n° do 2° contador
+
+    function repetitive (arrayNumbers) {
+        let index = 0;
+        let cont1 = 0;
+        let cont2 = 0;
+        for (let i = 0; i < arrayNumbers.length; i += 1) {
+            for (let j = 0; j < arrayNumbers.length; j += 1){
+                if (arrayNumbers[i] === arrayNumbers[j]){
+                    cont2 += 1;
+                }
+            }
+            if (cont1 < cont2) {
+                cont1 = cont2;
+                index = i;
+            }
+            cont2 = 0;
+        }
+        return arrayNumbers[index];
+    }
+    </script>
+</body>
+</html>
