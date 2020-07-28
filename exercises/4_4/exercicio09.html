@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 4.4</title>
+</head>
+<body>
+    <h2>Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+</h2>
+<h3><strong>Exemplo:</strong></h3>
+<ul>
+    <li>Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];</li>
+    <li>Valor esperado no retorno da função: Fernanda.</li>
+
+    <script>
+    function biggestName (names) {
+        let longer = 0;
+        for (let i =1; i < names.length; i += 1) {
+            let namesLength = names[longer].length;
+            if (namesLength < names[i].length) {
+                longer = i;
+            }
+        }
+        return names[longer];
+    }
+    </script>
+</body>
+</html>
