@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Fomulários</h1>
+
+    <!-- action é a página onde as informações que o forms vai coletar serão salvas instruido através do method "GET"  -->
+    <form action="data.html" method="GET"></form>
+
+    <!-- label é como um título ou etiqueta, o atributo for é para colocar a etiqueta da qual ele vai estar atribuido -->
+    <label for="email">Digite seu email</label>
+
+    <!-- atributo required  significa que aquele input é obrigatéio -->
+    <!-- atributo value é para deixar um texto já preenchido dentro da caixa do input -->
+    <input id="email" value="example@example.com" required="required" type="text" name="email"
+        placeholder="Digite seu email:">
+    <button type="submit">Enviar</button><br>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+<hr>
+    <div><h3>Check Box</h3>
+        <p>No comando input utilize a opção checkbox no atributo type, os atributos name e value <br>
+            são para dar nome aquelas checkbox e retornar um valor, vale lembrar que um grupo de <br>
+            checkbox de ter o mesmo nome. <br>
+            Exemplo: input name="teste" value="t" type="checkbox">teste <br>
+            Checkbox pode ter mais de uma opção selecionada!
+        </p>
+        <input name="teste" value="t" type="checkbox">teste
+        <input name="teste" value="t1" type="checkbox">teste2
+        <input name="teste" value="t2" type="checkbox">teste3
+    </div>
+<hr>
+    <div><h3>Radio Buttons</h3>
+        <p>Só pode ter um selecionado, seu tipo é radio, segue a mesma estrutura do checkbox <br>
+            Exemplo :input name="sexo" value="m" type="checkbox">Masculino
+        </p>
+        <input name="sexo" value="m" type="radio">Masculino
+        <input name="sexo" value="f" type="radio">Feminino
+    </div>
+    <hr>
+    <div><h3>Exemplo de Label</h3>
+        <p>Usando a label é possível que ao clicar no nome da descrição do item, ele também é selecionado <br>
+         Exemplo: label for="ts">input id="ts" name="teste" value="t" type="checkbox">teste /label>
+        </p>
+        <label for="ts"><input id="ts" name="teste" value="t" type="checkbox">teste </label>
+        <label for="ts2"><input id="ts2" name="teste" value="t" type="checkbox">teste2 </label>
+        <br>
+        <label for="sexo1"><input id="sexo1" name="sexo" value="m" type="radio">Masculino</label>
+        <label for="sexo2"><input id="sexo2" name="sexo" value="f" type="radio">Feminino</label>
+    </div>
+    <hr>
+    <div><h3>Drow List</h3>
+        <p>Use o comando select e crie as opções a serem selecionadas com o comando option.</p>
+        <select name="cidade" id="">
+            <option value="">Selecione sua cidade</option>
+            <option value="">São Paulo</option>
+            <option value="">Belo Horizonte</option>
+        </select>
+    </div>
+    <hr>
+    <div><h3>File inputs</h3>
+        <p>Apenas inserir no type a opção file, quando File Inputs estiverem dentro de um forms, <br>
+        deve-se usar o atributo enctype com a opção multipart/form-data, para indicar que o forms <br>
+        vai receber tanto arquivo texto como arquivo data
+        </p>
+        <form enctype="multipart/form-data" action="">
+            <input type="file">
+        </form>
+    </div>
+</body>

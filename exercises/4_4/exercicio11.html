@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios aula 4.4</title>
+</head>
+<body>
+    <h2>Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+</h2>
+<h3><strong>Exemplo:</strong></h3>
+<ul>
+    <li>Valor de teste: N = 5;</li>
+    <li>Valor esperado no retorno da função: 1+2+3+4+5 = 15.</li>
+
+    <script>
+        
+    function repetitive (arrayNumbers) {
+        let index = 0;
+        let cont1 = 0;
+        let cont2 = 0;
+        for (let i = 0; i < arrayNumbers.length; i += 1) {
+            for (let j = 0; j < arrayNumbers.length; j += 1){
+                if (arrayNumbers[i] === arrayNumbers[j]){
+                    cont2 += 1;
+                }
+            }
+            if (cont1 < cont2) {
+                cont1 = cont2;
+                index = i;
+            }
+            cont2 = 0;
+        }
+        return arrayNumbers[index];
+    }
+    </script>
+</body>
+</html>
