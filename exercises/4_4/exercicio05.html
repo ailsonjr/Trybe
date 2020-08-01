@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios aula 4.4</title>
 </head>
+
 <body>
     <h2>Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
-</h2>
-<h3><strong>Exemplo:</strong></h3>
-<ul>
-    <li>Exemplo de palíndromo: arara.</li>
-    <li>verificaPalindrome("arara");</li>
-    <li>Retorno esperado: <em>true</em></li>
-    <li>verificaPalindrome("desenvolvimento");</li>
-    <li>Retorno esperado: <em>false</em></li>
-</ul>
+    </h2>
+    <h3><strong>Exemplo:</strong></h3>
+    <ul>
+        <li>Exemplo de palíndromo: arara.</li>
+        <li>verificaPalindrome("arara");</li>
+        <li>Retorno esperado: <em>true</em></li>
+        <li>verificaPalindrome("desenvolvimento");</li>
+        <li>Retorno esperado: <em>false</em></li>
+    </ul>
     <script>
 
-        function palindromo (palavra){
-          let verifica = true;
-          let pos = palavra.length -1;
-                    for ( let i = 0; i<= palavra.length; i+=1 ) {
-                        if ( palavra[i] !== palavra[pos] ){
-                            verifica = false;
-                            break;
-                        }
-                        pos -= 1;
-                    }
-                    return verifica;
+        function palindromo(palavra) {
+            let verifica = true;
+            let pos = palavra.length - 1;
+            for (let i = 0; i <= palavra.length; i += 1) {
+                if (palavra[i] !== palavra[pos]) {
+                    verifica = false;
+                    break;
                 }
-    console.log (palindromo("arara"));
-    console.log (palindromo("desenvolvimento"));
+                pos -= 1;
+            }
+            return verifica;
+        }
+        console.log(palindromo("arara"));
+        console.log(palindromo("desenvolvimento"));
     </script>
 </body>
+
 </html>
