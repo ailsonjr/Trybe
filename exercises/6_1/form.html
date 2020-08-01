@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercício 01 Aula 6.1 - HTML & CSS - Forms</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <fieldset>
+        <label for="name">Nome:</label>
+        <input required="required" id="name" type="text" maxlength="40">
+        <label for="">Digite seu email:</label>
+        <input type="email" placeholder="example@example.com" required="required" maxlegngth="50"> <br>
+        
+        <label for="cpf">CPF</label>
+        <input  required="required" id="cpf" type="number" maxlength="11" placeholder="xxx.xxx.xxx-xx"> <br>
+        
+        <label for="address">Endereço:</label>
+        <input  required="required" id="address" type="text" maxlength="200"> <br>
+       
+       <label for="city">Cidade:</label>
+        <input  required="required" id="city" type="text" maxlength="28">
+        
+        <label for="state">Estado:</label>
+        <select  required="required" id="state" type="combox" maxlength="200"></select>
+        
+        <label for="home">Tipo de moradia:</label>
+        <input  required="required" id="home" type="radio">Casa 
+        <input  required="required" id="Apart" type="radio">Apartamento
+        
+    </fieldset>
+    <script type="text/javascript" href="script.js"></script>
+</body>
+
+</html>
