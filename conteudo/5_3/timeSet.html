@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+
+<button onclick="setTimeout(myFunction, 3000);">Try it</button> <!--Ao clicar no botão, iniciará a contar o tempo de 3000 milisegundos para acionar myFunction -->
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button> <!--Ao botão é atribuido myVar con a função do timer-->
+
+<button onclick="clearTimeout(myVar)">Stop it</button> <!--Nesse botão é atribuito a função para zerar o timer de myVar-->
+
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button> <!--Botão usa o clearInterval para parar a contagem do relógio-->
+
+
+<script>
+function myFunction() {
+  alert('Hello');
+}
+var myVar = setInterval(myTimer, 1000);
+
+// A função myTimer é criada um variável que recebe o valor da data atual e através do DOM é selecionado o elemento com id demo e atribuido a ele o valor da hora atual
+function myTimer() {
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>

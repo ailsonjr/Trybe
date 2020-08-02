@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display this frame's height and width.</p>
+
+<button onclick="myFunction()">Try it</button> <!--Ao clicar no botão será impresso no paragrado demo altura e largura da janela-->
+
+<p><strong>Note:</strong> The innerWidth and innerHeight properties are not supported in IE8 and earlier.</p>
+
+<p id="demo"></p>
+
+<script>
+
+</script>
+
+
+<p>Click the button to display this browser window's height and width (including toolbars and scrollbars).</p>
+
+<button onclick="myFunction1()">Try it</button> <!--Ao clicar no botão será impresso no paragrado demo altura e largura da página-->
+
+<p><strong>Note:</strong> The outerWidth and outerHeight properties are not supported in IE8 and earlier.</p>
+
+<p id="demo1"></p>
+<hr>
+<p id="demo2"></p>
+<hr>
+<div id="demo3"></div>
+<hr>
+
+<script>
+    function myFunction() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+function myFunction1() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  document.getElementById("demo1").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+var x = document.getElementById("demo2");
+x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+
+var txt = "";
+txt += "<p>innerWidth: " + window.innerWidth + "</p>";
+txt += "<p>innerHeight: " + window.innerHeight + "</p>";
+txt += "<p>outerWidth: " + window.outerWidth + "</p>";
+txt += "<p>outerHeight: " + window.outerHeight + "</p>";
+
+document.getElementById("demo3").innerHTML = txt;
+</script>
+
+</body>
+</html>
