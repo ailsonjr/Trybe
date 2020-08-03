@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercício 01 Aula 6.1 - HTML & CSS - Forms</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <fieldset>
+        <label for="name">Nome:</label>
+        <input required="required" id="name" type="text" maxlength="40">
+        <label for="">Digite seu email:</label>
+        <input type="email" placeholder="example@example.com" required="required" maxlegngth="50"> <br>
+
+        <label for="cpf">CPF</label>
+        <input required="required" id="cpf" type="number" maxlength="11" placeholder="xxx.xxx.xxx-xx"> <br>
+
+        <label for="address">Endereço:</label>
+        <input required="required" id="address" type="text" maxlength="200"> <br>
+
+        <label for="city">Cidade:</label>
+        <input required="required" id="city" type="text" maxlength="28">
+
+        <label for="state">Estado:</label>
+        <select required="required" id="state" type="combox" maxlength="200"></select><br>
+
+        <div required="required">
+            <p>Tipo de Moradia:</p>
+            <label for="home">
+                <input name="moradia" id="home" value="hm" type="radio">Casa
+            </label>
+            <label for="apart">
+                <input name="moradia" id="apart" value="ap" type="radio">Apartamento
+            </label>
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <label for="curriculum">Curriculo:</label> <br>
+        <textarea required='required' name="curriculo" id="curriculum" cols="30" rows="10" maxlength="1000"></textarea>
+        <br>
+
+        <label for="role">Cargo:</label> <br>
+        <input required="required" id="role" type="text" maxlength="40"> <br>
+
+        <label for="description">Descrição do cargo:</label> <br>
+        <input required="required" id="description" type="text" maxlength="500"><br>
+        <label for="date">Data de início</label>
+        <input required="required" id="date" type="date">
+
+    </fieldset>
+    <script type="text/javascript" href="script.js"></script>
+</body>
+
+</html>
