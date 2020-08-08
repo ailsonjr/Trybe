@@ -1,17 +1,39 @@
 body {
-
+    font-size: 25px;
+    margin: 10px;
 }
 h1 {
-
+    font-size: 30px;
 }
 h2 {
 
 }
 
 img {
+    margin-top:  50px;
     max-width: 100%;
 }
 
 figure {
     margin: 0;
+}
+
+@media screen and (max-width: 888px) {
+    body {
+        background-color: cyan;
+        font-size: 20px;
+        margin: 0px;
+    }
+    section {
+        display: flex;
+        flex-direction: column-reverse;
+flex-wrap: wrap-reverse;
+align-content: space-between;
+justify-content: center
+    }
+    
+    img {
+        margin: 1px;
+        flex-basis: 50%;
+    }
 }
