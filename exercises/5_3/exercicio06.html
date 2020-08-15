@@ -44,13 +44,18 @@
     <p id="story">I knew I shouldn't go there, in that dank, cold little place. But I wanted to find my friend, and he
         was hiding in the basement.</p>
 
-    <button>Get In The Mood</button>
-    <div class="textEntry">Type your name here, if you dare: <input type="text" id="name" autocomplete="off"></div>
-    <button>Please, Please Don't Click Me</button>
-    <button>Tell Me What Happened!</button>
+    <button id="btnMood">Get In The Mood</button>
+    <div class="textEntry">Type your name here, if you dare: <input type="text" id="name" autocomplete="off"
+            oninput="inputName()"></div>
+    <!-- Adicionado o atributo oninput, que, ao digitar o texto na caixa de texto, já é atribuido simultaneamente a variável personName através da função inputName -->
+    <button id="complain">Please, Please Don't Click Me</button>
+    <button id="scream">Tell Me What Happened!</button>
     <audio id="audio" src="http://reboot-me.com/ouch.mp3" type="audio/mpeg"></audio>
 
-    <script>var personName = "";
+    <script>let cont = 0;
+        function inputName() {
+            let personName = document.getElementById("name").value;;
+        } // Função foi criada para que ao digitar um texto na caixa de input, mesma é atribuida a variável criada
 
         function complainMessage() {
             alert("I told you not to do that " + personName);
@@ -75,6 +80,21 @@
         function finishTheStory() {
             document.getElementById("story").innerHTML = "So I carefully searched the damp dungeon. There you are! I grinned a smile with all 98 of my gleaming teeth. Dinner time!";
         }
+        //Foi implementado essas 3 variáveis com seus respectivos eventos
+        let getInTheMood = document.getElementById('btnMood');
+        getInTheMood.addEventListener('click', goDark); //Ao clicar no botão Get In The Mood, a função goDark é chamada mudando o css da página
+
+        let btnTmwh = document.querySelector('#scream');
+        btnTmwh.addEventListener('click', finishTheStory); //Ao clicar no botão Tell Me What happened, a função typeAndScream é executada e um som é ouvido
+
+        let btnComplain = document.querySelector("#complain");
+        btnComplain.addEventListener('click', complainMessage);
+        //Ao clicar no botão Don't click me a funcção complainMessage é executada gerando um alert na tela
+
+        const nome = document.querySelector('#name');
+        nome.addEventListener('input', typeAndScream);
+
+
     </script>
 </body>
 
