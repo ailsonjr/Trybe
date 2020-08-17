@@ -8,50 +8,99 @@
 </head>
 
 <body>
-    <fieldset>
-        <label for="name">Nome:</label>
-        <input required="required" id="name" type="text" maxlength="40">
-        <label for="">Digite seu email:</label>
-        <input type="email" placeholder="example@example.com" required="required" maxlegngth="50"> <br>
 
-        <label for="cpf">CPF</label>
-        <input required="required" id="cpf" type="number" maxlength="11" placeholder="xxx.xxx.xxx-xx"> <br>
+    <form action="" enctype="multipart/form-data">
 
-        <label for="address">Endereço:</label>
-        <input required="required" id="address" type="text" maxlength="200"> <br>
+        <fieldset>
+            <label for="name">Nome:</label>
+            <input required="required" id="name" type="text" maxlength="40">
+            <label for="">Digite seu email:</label>
+            <input type="email" placeholder="example@example.com" required="required" maxlegngth="50"> <br>
 
-        <label for="city">Cidade:</label>
-        <input required="required" id="city" type="text" maxlength="28">
+            <label for="cpf">CPF</label>
+            <input required="required" id="cpf" type="number" maxlength="11" placeholder="xxx.xxx.xxx-xx"> <br>
 
-        <label for="state">Estado:</label>
-        <select required="required" id="state" type="combox" maxlength="200"></select><br>
+            <label for="address">Endereço:</label>
+            <input required="required" id="address" type="text" maxlength="200"> <br>
 
-        <div required="required">
-            <p>Tipo de Moradia:</p>
-            <label for="home">
-                <input name="moradia" id="home" value="hm" type="radio">Casa
-            </label>
-            <label for="apart">
-                <input name="moradia" id="apart" value="ap" type="radio">Apartamento
-            </label>
-        </div>
+            <label for="city">Cidade:</label>
+            <input required="required" id="city" type="text" maxlength="28">
 
-    </fieldset>
-    <fieldset>
-        <label for="curriculum">Curriculo:</label> <br>
-        <textarea required='required' name="curriculo" id="curriculum" cols="30" rows="10" maxlength="1000"></textarea>
-        <br>
+            <label for="state">Estado:</label>
+            <select id="state" type="combox" maxlength="200">
+                <option value="">Selecione</option>
+            </select><br>
 
-        <label for="role">Cargo:</label> <br>
-        <input required="required" id="role" type="text" maxlength="40"> <br>
+            <div required="required">
+                <p>Tipo de Moradia:</p>
+                <label for="home">
+                    <input name="moradia" id="home" value="hm" type="radio">Casa
+                </label>
+                <label for="apart">
+                    <input name="moradia" id="apart" value="ap" type="radio">Apartamento
+                </label>
+            </div>
 
-        <label for="description">Descrição do cargo:</label> <br>
-        <input required="required" id="description" type="text" maxlength="500"><br>
-        <label for="date">Data de início</label>
-        <input required="required" id="date" type="date">
+        </fieldset>
+        <fieldset>
+            <label for="curriculum">Curriculo:</label> <br>
+            <textarea required='required' name="curriculo" id="curriculum" cols="30" rows="10"
+                maxlength="1000"></textarea>
+            <br>
 
-    </fieldset>
-    <script type="text/javascript" href="script.js"></script>
+            <label for="role">Cargo:</label> <br>
+            <input required="required" id="role" type="text" maxlength="40"> <br>
+
+            <label for="description">Descrição do cargo:</label> <br>
+            <input required="required" id="description" type="text" maxlength="500"><br>
+            <label for="date">Data de início</label>
+            <input required="required" id="date" placeholder="dd/mm/aaaa" type="text">
+
+        </fieldset>
+
+        <button id="btnSubmit" type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const states = ["AC", "AL", "AP", "AM", "BH", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"]
+
+        let optionStates = document.querySelector("#state");
+        let btnValidateDate = document.getElementById("btnSubmit");
+        let inputDate = document.getElementById('date');
+
+        function options(states) {
+            for (let i = 0; i < states.length; i += 1) {
+                let state = document.createElement('option');
+                optionStates.appendChild(state);
+                state.innerHTML = states[i];
+            }
+
+        }
+
+        window.onload = function () {
+            options(states);
+        }
+        function validateDate(date) {
+            let day = parseInt(date.substring(0, 2));
+            let mouth = parseInt(date.substring(3, 5));
+            let year = parseInt(date.substring(6, 10));
+            let bars = date.charAt(2) + date.charAt(5);
+
+            if (date.length !== 10 || bars !== "//") {
+                required = false;
+                return alert("Formato inserido não é válido")
+            }
+
+            if (0 < day < 31 || 0 < mouth < 12 || year < 0) {
+                required = false;
+                return alert('Data inserida inválida!')
+            }
+            required = true;
+        }
+
+
+        btnValidateDate.addEventListener('click', validateDate);
+    </script>
 </body>
 
 </html>
