@@ -16,16 +16,6 @@ function containsA() {
     }, 0), 0);
 }
 
-function containsA() {
-  const result = 0;
-  const separador = names.reduce((acc, currentValue) => acc + currentValue.split(''), '');
-  separador.reduce((acc, currentValue) => {
-    if (currentValue === 'a' || currentValue === 'A') {
-      result = acc + 1; 
-    }
-  })
-  return result;
-}
 
 
 assert.deepEqual(containsA(), 20);
