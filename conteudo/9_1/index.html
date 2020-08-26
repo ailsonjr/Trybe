@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Aula 9.1</title>
+  </head>
+
+  
+
+  <body>
+    <ul></ul>
+
+    <script>
+      const appendJoke = (joke) => {
+        let ul = document.querySelector('ul');
+        let li = document.createElement('li');
+        li.innerHTML = joke;
+        ul.appendChild(li);
+      };
+
+      const fetchJoke = () => {
+        const param = { headers: { Accept: 'application/json' } };
+        fetch('https://icanhazdadjoke.com/search?term=spider', param)
+          .then((response) => {
+            response.json()
+              .then((data) => {
+                appendJoke(`PRIMEIRA: ${data.results[0].joke}`);
+
+                fetch('https://icanhazdadjoke.com/search?term=spider', param)
+                  .then((response) => {
+                    response.json()
+                      .then((data) => {
+                        appendJoke(`SEGUNDA: ${data.results[0].joke}`);
+
+                        fetch('https://icanhazdadjoke.com/search?term=spider', param)
+                          .then((response) => {
+                          response.json()
+                            .then((data) => {
+                              appendJoke(`TERCEIRA: ${data.results[0].joke}`);
+                            });
+                      });
+                      });
+                  });
+
+              })
+          })
+      }
+
+      window.onload = () => fetchJoke();
+
+    </script>
+  </body>
+</html>
