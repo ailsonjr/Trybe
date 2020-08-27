@@ -7,9 +7,12 @@ const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMillisec
 
 const printErrorMessage = (error) => console.log(`Error getting country: ${error}`);
 
+const sucessRate = () => Math.floor(Math.random()* 100);
+
 const getCountry = (onSuccess) => {
   setTimeout(() => {
     const didOperationSucceed = Math.random() >= 0.5;
+    console.log(didOperationSucceed)
     if(didOperationSucceed) {
       const country = {
         name: "Brazil",
