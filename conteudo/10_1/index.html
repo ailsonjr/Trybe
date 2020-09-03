@@ -1,0 +1,55 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Lecture 9.2</title>
+    <script>
+      const appendJoke = (joke) => {
+        let ul = document.querySelector("ul")
+        let li = document.createElement("li")
+        li.innerHTML = joke
+        ul.appendChild(li)
+      }
+
+      const param = { headers: { Accept: 'application/json' } };
+
+      const getRandomJoke = (term) => {
+        return new Promise((resolve, reject) => {
+          if (term === 'ant') reject('This joke wasn\'t good. Term:', term)
+          else {
+            fetch(`https://icanhazdadjoke.com/search?term=${term}`, param)
+            .then((response) => {
+              response.json()
+                .then((data) => {
+                  const joke = data.results[0].joke;
+                  appendJoke(joke);
+                  resolve();
+                })
+            })
+          }
+        });  
+      }
+
+      const fetchJoke = async () => {
+        try {
+          await getRandomJoke('spider');
+          await getRandomJoke('pizza');
+          await getRandomJoke('wolf');
+          await getRandomJoke('ant');
+        } catch (errors) {
+          window.alert('Joke not found');
+        }
+      }
+
+      window.onload = () => fetchJoke();
+    </script>
+  </head>
+
+  <body>
+    <ul>
+    </ul>
+  </body>
+
+</html>
