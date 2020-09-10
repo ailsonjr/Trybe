@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Exercises from './freeCodeCamp';
 
 const task = (value) => {
   return (
@@ -12,7 +11,12 @@ const todoList = ['Ler','Escrever', 'Exercitar', 'Meditar', 'Caminhar', 'Jogar']
 const mapList = todoList.map(job => task(job));
 
 function App() {
-  return (task(mapList));
+  return <div> 
+    <Exercises />
+    <ul>
+      { (task(mapList)) }
+    </ul>
+  </div>
 }
 
 export default App;
