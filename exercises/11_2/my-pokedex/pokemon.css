@@ -1,0 +1,10 @@
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-div {
+  background-color: chartreuse;
+  display: flex;
+  color: green;
+}

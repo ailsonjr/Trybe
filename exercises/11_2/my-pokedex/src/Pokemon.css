@@ -1,0 +1,10 @@
+.pokemon-div {
+  display: flex;
+  justify-items: center;
+  
+  color: blue;
+}
+
+h1 {
+  color: aqua;
+}
