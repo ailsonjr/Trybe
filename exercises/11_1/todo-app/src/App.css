@@ -1,0 +1,15 @@
+h1 {
+  margin: 2px;
+}
+h2 {
+  color: blue;
+}
+
+h3 {
+  color: red;
+  margin: 20px;
+}
+
+.exercise {
+  color: green;
+}
