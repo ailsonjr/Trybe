@@ -1,4 +1,4 @@
-// Quando a promise for resolvida com sucesso, retorne o resultado da divisão desse número por 2, 3, 5 e 10 em um array.
+// Quando a Promise for rejeitada, imprima, via console.log , a frase "É mais de oito mil! Essa promise deve estar quebrada!"
 
 const promise = new Promise((resolve, reject) => {
   const array = [];
@@ -22,4 +22,4 @@ const promise = new Promise((resolve, reject) => {
     const newArray = divisors.map(numbers => number / numbers);
     return console.log(`A soma dos elementos da array é ${number} e resultado da divisão desse número por 2, 3, 5 e 10 em um array é [ ${newArray} ]`);
   })
-  .catch(number => console.log(`Erro: A soma dos elementos da array é ${number} e é maior que 8000`));
+  .catch(number => console.log("É mais de oito mil! Essa promise deve estar quebrada!"));
