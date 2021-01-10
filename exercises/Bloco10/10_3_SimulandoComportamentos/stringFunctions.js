@@ -8,12 +8,12 @@ function firstLetter(string) {
   return string[0].toUpperCase() + string.substr(1);
 }
 
-function concatStrings(str1, str2) {
+function concatTwoStrings(str1, str2) {
   return str1 + str2
 }
 
 module.exports = {
   toUpperCase,
   firstLetter,
-  concatStrings
+  concatTwoStrings
 }
