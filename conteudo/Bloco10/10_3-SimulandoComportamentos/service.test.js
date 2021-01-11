@@ -1,5 +1,15 @@
 const service = require('./service');
 
+test("randomRgbColor com mockReturnValue específico", () => {
+  // testando se a função foi chamada e qual seu retorno
+  service.randomRgbColor = jest.fn()
+    .mockReturnValue("rgb(255, 255, 255)");
+
+  service.randomRgbColor();
+  expect(service.randomRgbColor).toHaveBeenCalled();
+  expect(service.randomRgbColor()).toBe("rgb(255, 255, 255)");
+});
+
 test("#randomRgbColor", () => {
   // testando quantas vezes a função foi chamada e qual seu retorno
   service.randomRgbColor = jest
