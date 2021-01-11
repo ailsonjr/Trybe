@@ -1,4 +1,5 @@
-const toDoList = ['Meditar', 'Exercitar', 'Estudar', 'Praticar']
+import CardList from './script'
+const toDoList = ['Meditar', 'Exercitar', 'Estudar', 'Praticar'];
 
 const task = (value) => {
   return (
@@ -7,7 +8,14 @@ const task = (value) => {
 }
 
 function App() {
-  return toDoList.map((toDo) => task(toDo));
+  return (
+    <div>
+      {toDoList.map((toDo) => task(toDo))}
+      <CardList />
+    </div>
+  )
+    
+  
 }
 
 export default App;
