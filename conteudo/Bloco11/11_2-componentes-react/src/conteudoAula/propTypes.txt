@@ -1,0 +1,104 @@
+# Exemplo de como devemos utilizar:
+
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+
+# Tipos de PropTypes básicas:
+
+ PropTypes.array,
+ PropTypes.bool,
+ PropTypes.func,
+ PropTypes.number,
+ PropTypes.object,
+ PropTypes.string,
+ PropTypes.symbol,
+
+ - Outros tipos de PropTypes:
+
+  * Qualquer coisa pode ser renderizada (numbers, strings, elements ou  array) = PropTypes.node,
+
+  * Tipo de elemento de React (ex. MyComponent) = PropTypes.elementType,
+
+  * Se tem uma clase instanciada = PropTypes.instanceOf(Message),
+
+  * Garantir que a prop tenha um valor específico baseado no enunciado = PropTypes.oneOf(['News', 'Photos']),
+
+  * Para um objeto: 
+  
+    -  Que pode ter mais de um tipo =
+       PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.number,
+          PropTypes.instanceOf(Message)
+        ]),
+
+
+    - Com um tipo específico = PropTypes.objectOf(PropTypes.number),
+
+    - Com um um tipo particular de escopo = 
+      PropTypes.shape({
+        color: PropTypes.string,
+        fontSize: PropTypes.number
+      }),
+
+    - Com alertas nas propriedades extras =
+      PropTypes.exact({
+        name: PropTypes.string,
+        quantity: PropTypes.number
+      }),
+
+    
+
+  * Um array com um tipo específico = PropTypes.arrayOf(PropTypes.number),
+
+  * Qualquer um dos PropTypes acima podem ser usados em conjunto com 'isRequired' para alertar caso uma props não seja provida = PropTypes.func.isRequired,
+
+  * React element = PropTypes.element,
+    - com o mesmo você pode especificar que apenas um filho pode ser passado para o componente = Exemplo:
+      import PropTypes from 'prop-types';
+
+      class MyComponent extends React.Component {
+        render() {
+          // This must be exactly one element or it will warn.
+          const children = this.props.children;
+          return (
+            <div>
+              {children}
+            </div>
+          );
+        }
+      }
+
+      MyComponent.propTypes = {
+        children: PropTypes.element.isRequired
+      };
+
+  * Pode-se definir um valor padrão = 
+    - Exemplo:
+        class Greeting extends React.Component {
+          render() {
+            return (
+              <h1>Hello, {this.props.name}</h1>
+            );
+          }
+        }
+
+        // Specifies the default values for props:
+        Greeting.defaultProps = {
+          name: 'Stranger'
+        };
+
+        // Renders "Hello, Stranger":
+
+Para instalar o PropTypes, use o comando "npm install --save prop-type"
