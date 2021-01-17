@@ -24,7 +24,7 @@ class FancyButtons extends React.Component {
     return (
       <div>
         <h3>Componente FancyButtons</h3>
-        <p>Evento com 3 botões onde cada um imprime no console uma mensagem diferentegit</p>
+        <p>Evento com 3 botões onde cada um imprime no console uma mensagem diferente</p>
         <button onClick={handleClick}>Meu botão1</button>
         <button onClick={handleClick2}>Meu botão2</button>
         <button onClick={handleClick3}>Meu botão3</button>
