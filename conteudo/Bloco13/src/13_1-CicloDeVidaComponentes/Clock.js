@@ -31,9 +31,9 @@ class Clock extends React.Component {
     return (
       <section>
         {
-          showDateTime && <span>{currentDateTime.toLocaleTimeString()}</span>
+          showDateTime && <span>{ currentDateTime.toLocaleTimeString() }</span>
         }
-        <button type="button" onClick={turnOffButton}>Desligar relógio</button>
+        <button type="button" onClick={ turnOffButton }>Desligar relógio</button>
       </section>
     );
   }

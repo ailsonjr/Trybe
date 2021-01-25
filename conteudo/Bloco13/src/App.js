@@ -30,8 +30,8 @@ class App extends React.Component {
         <Counter />
         <FreeCodeCamp />
         <Lecture
-          showDateTime={showDateTime}
-          turnOffButton={this.turnOffButton} />
+          turnOffButton={ this.turnOffButton}
+          showDateTime={showDateTime} />
       </div>
     );
   }
