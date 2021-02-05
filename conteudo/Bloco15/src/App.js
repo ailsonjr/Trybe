@@ -1,4 +1,4 @@
-import Conteudo1 from './RTL/Conteudo1';
+import Conteudo1 from './15_1-RTL/Conteudo1';
 import './App.css';
 
 function App() {
