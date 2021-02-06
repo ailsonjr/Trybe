@@ -40,6 +40,7 @@ export default class App extends React.Component {
         />
         <input id="btn-back" type="button" value="Voltar" />
         <ValidEmail email={saveEmail} />
+        <hr />
       </div>
     );
   }
