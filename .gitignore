@@ -1,4 +1,8 @@
 **/node_modules
 .vscode
 .DS_Store
+<<<<<<< HEAD
 .eslintcache
+=======
+.eslintcache
+>>>>>>> 11_2-ComponentesReact
