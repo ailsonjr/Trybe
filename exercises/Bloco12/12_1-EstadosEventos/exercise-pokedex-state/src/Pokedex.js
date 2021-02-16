@@ -1,14 +1,33 @@
 import React from 'react';
 import Pokemon from './Pokemon';
+import NextButton from './NextButton';
 
 class Pokedex extends React.Component {
-    render() {
-        return (
-            <div className="pokedex">
-                {this.props.pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}
-            </div>
-        );
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 0
     }
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(totalPokemons) {
+    this.setState((prevState) => ({
+      index: (prevState.index + 1) % totalPokemons.length
+    }));
+  }
+
+  render() {
+    const { index } = this.state;
+    const { pokemons } = this.props;
+    return (
+      <div className="pokedex">
+        <Pokemon pokemon={pokemons[index]} />
+        <NextButton handleClick={() => this.handleClick(pokemons)}/>
+      </div>
+    );
+  }
 }
 
 export default Pokedex;
