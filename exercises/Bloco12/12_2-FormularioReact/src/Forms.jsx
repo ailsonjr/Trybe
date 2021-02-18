@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Cargo from './components/Cargo';
-import Cidade from './components/Cidade';
-import CPF from './components/CPF';
-import Curriculo from './components/Curriculo';
-import DescricaoCargo from './components/DescricaoCargo';
-import Email from './components/Email';
-import Endereco from './components/Endereco';
-import Estado from './components/Estado';
-import Nome from './components/Nome';
+import Cargo from './components/Professional/Cargo';
+import Cidade from './components/Personal/Cidade';
+import CPF from './components/Personal/CPF';
+import Curriculo from './components/Professional/Curriculo';
+import DescricaoCargo from './components/Professional/DescricaoCargo';
+import Email from './components/Personal/Email';
+import Endereco from './components/Personal/Endereco';
+import Estado from './components/Personal/Estado';
+import Nome from './components/Personal/Nome';
+import FormErrors from './components/FormErrors';
 
 const states = ['Rio de Janeiro', 'Minas Gerais', 'Amapá', 'Amazonas', 'São Paulo', 'Ceará', 'Distrito Federal'];
 
@@ -75,11 +76,11 @@ class Forms extends Component {
   }
 
   render() {
-    const { name, email, cpf, address, city, countryState, resume, role, roleDescription } = this.state;
-    const { changeHandler, onBlurHandler } = this;
+    const { name, email, cpf, address, city, countryState, resume, role, roleDescription, formErrors } = this.state;
+    const { changeHandler, onBlurHandler, handleSubmit } = this;
     return (
       <div>
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Dados pessoais</legend>
             <Nome
@@ -124,7 +125,11 @@ class Forms extends Component {
               onChange={changeHandler}
             />
           </fieldset>
+          <input type="submit" value="Enviar" />
         </form>
+        <div className="container">
+          <FormErrors formErrors={formErrors} />
+        </div>
       </div>
     );
   }
