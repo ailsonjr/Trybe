@@ -1,5 +1,5 @@
 import React from 'react';
-import Exercise from "./15_1-RTL/exercise-one/src/Exercise";
+import Exercise from "./15_1-RTL/exercise/src/Exercise";
 
 function App() {
   return (
