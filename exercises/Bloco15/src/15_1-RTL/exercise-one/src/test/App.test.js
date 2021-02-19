@@ -1,6 +1,7 @@
 import React from 'react';
+import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
-import App from '../App';
+import App from '../Exercise';
 
 describe('Testando a aplicação, testando input', () => {
   const { getByLabelText, getByText } = render(<App />)
