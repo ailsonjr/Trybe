@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Context } from './context/Context';
+import { Context } from '../context/Context';
 import redSignal from './images/redSignal.jpeg';
 import yellowSignal from './images/yellowSignal.jpeg';
 import greenSignal from './images/greenSignal.jpeg';

@@ -1,6 +1,8 @@
 .game-board {
   display: flex;
   flex-wrap: wrap;
-  height: auto;
+  height: 120px;
+  margin-top: 50px;
+  padding-left: 100px;
   width: 120px;
 }
